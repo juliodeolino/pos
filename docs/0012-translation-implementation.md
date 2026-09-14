@@ -10,7 +10,7 @@ The frontend uses the industry-standard `@ngx-translate` library to handle stati
 
 ### Core Components
 - **Library:** `@ngx-translate/core` and `@ngx-translate/http-loader`.
-- **Storage:** Translation files are located in `front/public/i18n/*.json` (e.g., `en.json`, `es.json`, `ca.json`, `de.json`, `zh-CN.json`, `hi.json`, `ur.json`).
+- **Storage:** Translation files are located in `front/public/i18n/*.json` (e.g., `en.json`, `es.json`, `ca.json`, `de.json`, `pt-BR.json`, `zh-CN.json`, `hi.json`, `ur.json`).
 - **Service:** `LanguageService` (`front/src/app/services/language.service.ts`) acts as a wrapper around `@ngx-translate/core`.
 
 ### Initialization
@@ -22,7 +22,7 @@ In `front/src/app/app.config.ts`, the `TranslateModule` is initialized with a `T
    - `localStorage` first.
    - Browser's `navigator.language` second.
    - Fallback to `en` (English) third.
-3. **Normalization:** The `normalizeLanguageCode` method handles variants (e.g., `es-MX` or `es_ES` are both mapped to `es`, while `zh-Hans` is mapped to `zh-CN`).
+3. **Normalization:** The `normalizeLanguageCode` method handles variants (e.g., `es-MX` or `es_ES` are both mapped to `es`, `pt` or `pt_BR` to `pt-BR`, while `zh-Hans` is mapped to `zh-CN`).
 
 ### Usage in Templates
 Static text is rendered using the `translate` pipe or directive:

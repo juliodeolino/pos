@@ -285,6 +285,38 @@ _BG: dict[str, str] = {
     "res_status_no_show": "Неявяване",
 }
 
+_PT_BR: dict[str, str] = {
+    **_EN,
+    "sheet_summary": "Resumo",
+    "sheet_reservations": "Reservas",
+    "sheet_by_product": "Por produto",
+    "sheet_by_category": "Por categoria",
+    "sheet_by_table": "Por mesa",
+    "sheet_by_waiter": "Por garçom",
+    "date": "Data",
+    "revenue_cents": "Receita (centavos)",
+    "cost_cents": "Custo (centavos)",
+    "profit_cents": "Lucro (centavos)",
+    "orders": "Pedidos",
+    "total": "Total",
+    "source": "Origem",
+    "count": "Quantidade",
+    "status": "Status",
+    "product": "Produto",
+    "category": "Categoria",
+    "quantity": "Quantidade",
+    "table": "Mesa",
+    "waiter": "Garçom",
+    "tips_cents": "Gorjetas (centavos)",
+    "source_public": "Público (online)",
+    "source_staff": "Equipe",
+    "res_status_booked": "Reservado",
+    "res_status_seated": "Na mesa",
+    "res_status_finished": "Concluído",
+    "res_status_cancelled": "Cancelado",
+    "res_status_no_show": "Não compareceu",
+}
+
 _LABELS: dict[str, dict[str, str]] = {
     "en": _EN,
     "es": _ES,
@@ -295,6 +327,7 @@ _LABELS: dict[str, dict[str, str]] = {
     "zh-CN": _ZH,
     "hi": _HI,
     "ur": _UR,
+    "pt-BR": _PT_BR,
 }
 
 

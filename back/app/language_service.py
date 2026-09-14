@@ -12,6 +12,7 @@ SUPPORTED_LANGUAGES = [
     "zh-CN",  # Chinese Simplified
     "hi",  # Hindi
     "ur",  # Urdu (RTL)
+    "pt-BR",  # Portuguese (Brazil)
 ]
 
 
@@ -21,6 +22,7 @@ def normalize_language_code(lang: str) -> str | None:
 
     Examples:
     - 'zh', 'zh-Hans', 'zh_CN' -> 'zh-CN'
+    - 'pt', 'pt-BR', 'pt_BR' -> 'pt-BR'
     - 'es-MX', 'es_ES' -> 'es'
     - 'en-US', 'en' -> 'en'
 
@@ -36,6 +38,10 @@ def normalize_language_code(lang: str) -> str | None:
     if normalized.startswith("zh"):
         return "zh-CN"
 
+    # Handle Portuguese variants
+    if normalized.startswith("pt"):
+        return "pt-BR"
+
     # Extract base language (everything before first hyphen)
     base_lang = normalized.split("-")[0]
 
@@ -43,9 +49,10 @@ def normalize_language_code(lang: str) -> str | None:
     if base_lang in SUPPORTED_LANGUAGES:
         return base_lang
 
-    # Check for exact matches with region codes
-    if normalized in SUPPORTED_LANGUAGES:
-        return normalized
+    # Check for exact matches with region codes (case-insensitive)
+    for supp in SUPPORTED_LANGUAGES:
+        if normalized == supp.lower():
+            return supp
 
     return None
 

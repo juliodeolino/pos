@@ -11,6 +11,7 @@ export const SUPPORTED_LANGUAGES = [
   { code: 'zh-CN', label: '中文（简体）', locale: 'zh-CN' },
   { code: 'hi', label: 'हिन्दी', locale: 'hi-IN' },
   { code: 'ur', label: 'اردو', locale: 'ur-PK' },
+  { code: 'pt-BR', label: 'Português (Brasil)', locale: 'pt-BR' },
 ] as const;
 
 export type LanguageCode = typeof SUPPORTED_LANGUAGES[number]['code'];
@@ -121,6 +122,11 @@ export class LanguageService {
     // Chinese variants
     if (lowerLang.startsWith('zh')) {
       return 'zh-CN';
+    }
+
+    // Portuguese variants
+    if (lowerLang.startsWith('pt')) {
+      return 'pt-BR';
     }
 
     // Base language match (e.g., es-MX -> es)

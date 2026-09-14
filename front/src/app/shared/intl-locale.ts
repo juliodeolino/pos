@@ -21,6 +21,7 @@ export function intlLocaleFromTranslate(translate: TranslateService): string {
     bg: 'bg-BG',
     hi: 'hi-IN',
     ur: 'ur-PK',
+    pt: 'pt-BR',
   };
   return map[base] || (typeof navigator !== 'undefined' && navigator.language) || 'en-US';
 }

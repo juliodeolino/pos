@@ -105,6 +105,17 @@ _BG: dict[str, str] = {
     "role": "Роля",
 }
 
+_PT_BR: dict[str, str] = {
+    **_EN,
+    "sheet": "Escala",
+    "date": "Data",
+    "start_time": "Início",
+    "end_time": "Fim",
+    "label": "Etiqueta",
+    "employee": "Funcionário",
+    "role": "Função / Rol",
+}
+
 _LABELS: dict[str, dict[str, str]] = {
     "en": _EN,
     "es": _ES,
@@ -115,6 +126,7 @@ _LABELS: dict[str, dict[str, str]] = {
     "zh-CN": _ZH,
     "hi": _HI,
     "ur": _UR,
+    "pt-BR": _PT_BR,
 }
 
 
@@ -241,6 +253,18 @@ _PVA_UR: dict[str, str] = {
     "scope_all": "تمام عملہ",
 }
 
+_PVA_PT_BR: dict[str, str] = {
+    **_PVA_EN,
+    "sheet": "Planejado vs Realizado (Ponto)",
+    "date": "Data",
+    "staff": "Equipe / Funcionários",
+    "planned": "Planejado",
+    "clocked": "Registrado (Ponto)",
+    "variance": "Diferença",
+    "totals": "Totais",
+    "scope_all": "Toda a equipe",
+}
+
 _PVA_LABELS: dict[str, dict[str, str]] = {
     "en": _PVA_EN,
     "es": _PVA_ES,
@@ -251,6 +275,7 @@ _PVA_LABELS: dict[str, dict[str, str]] = {
     "zh-CN": _PVA_ZH,
     "hi": _PVA_HI,
     "ur": _PVA_UR,
+    "pt-BR": _PVA_PT_BR,
 }
 
 
